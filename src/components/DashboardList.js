@@ -32,6 +32,11 @@ class DashboardList extends React.Component {
     this.props.DashboardStore.getSubCategoryAsync();
     this.props.DashboardStore.getArticlesAsync();
   }
+  componentDidUpdate() {
+    this.props.DashboardStore.getCategoryAsync();
+    this.props.DashboardStore.getSubCategoryAsync();
+    this.props.DashboardStore.getArticlesAsync();
+  }
   setSubCategoryById(id) {
     this.selectedCategoryId = id;
     this.subCategoryLista = [];
